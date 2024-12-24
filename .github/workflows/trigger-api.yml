@@ -1,0 +1,14 @@
+name: Trigger Vercel API Every 5 Minutes
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"  # Every 5 minutes
+
+jobs:
+  call-api:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Make API Request
+        run: |
+          curl -X GET https://<your-vercel-domain>/ || echo "API request failed"
