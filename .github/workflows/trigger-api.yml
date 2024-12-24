@@ -11,4 +11,4 @@ jobs:
     steps:
       - name: Make API Request
         run: |
-          curl -X GET https://<your-vercel-domain>/ || echo "API request failed"
+          curl -X GET https://serverless-crypto-api.vercel.app/ || echo "API request failed"
